@@ -1,0 +1,6 @@
+[10-Feb-2025 15:39:16 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/maimunag/public_html/siteinc/dashboard.php on line 132
+[10-Feb-2025 15:39:16 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/maimunag/public_html/siteinc/dashboard.php on line 132
+[10-Feb-2025 15:39:16 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/maimunag/public_html/siteinc/dashboard.php on line 139
+[10-Feb-2025 15:39:16 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/maimunag/public_html/siteinc/dashboard.php on line 139
+[10-Feb-2025 15:39:16 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/maimunag/public_html/siteinc/dashboard.php on line 158
+[10-Feb-2025 15:39:16 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/maimunag/public_html/siteinc/dashboard.php on line 158

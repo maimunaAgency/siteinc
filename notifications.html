@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications - MRX Pay</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    .notifications-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .notification {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .notification h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    .notification p {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="notifications-container">
+    <h1>Notifications</h1>
+    <div id="notifications-list">
+      <!-- Notifications will be dynamically added here -->
+    </div>
+  </div>
+
+  <script>
+    // Fetch notifications from the server
+    fetch('fetch-notifications.php')
+      .then(response => response.json())
+      .then(data => {
+        const notificationsList = document.getElementById('notifications-list');
+        data.forEach(notification => {
+          const notificationElement = document.createElement('div');
+          notificationElement.className = 'notification';
+          notificationElement.innerHTML = `
+            <h3>${notification.message}</h3>
+            <p>${notification.created_at}</p>
+          `;
+          notificationsList.appendChild(notificationElement);
+        });
+      });
+  </script>
+</body>
+</html>
